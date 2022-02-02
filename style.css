@@ -82,6 +82,17 @@ body{
     margin: 0 auto;
 }
 
+.home{
+    width: 100vw;
+    height: 100vh;
+    padding:0 9vw;
+    background-image: url('./assets/img/forma_7541.jpg');
+    
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100vw 100%;
+}
+
 .logo-container{
     height: 18vh;
     display: flex;
@@ -103,7 +114,7 @@ body{
     font-size: 1.8vh;
     font-style: normal;
     font-weight: 900;
-    line-height: 2.2vh;
+    line-height: 1.2;
     
     letter-spacing: 0.025em;
     color: #282728;
@@ -131,7 +142,7 @@ body{
     font-size: 1.8vh;
     font-style: normal;
     font-weight: 900;
-    line-height: 2.2vh;
+    line-height: 1.2;
     
     letter-spacing: 0.025em;
     color: #282728;
@@ -143,8 +154,8 @@ body{
 }
 
 .btn-logo{
-    width: 245px;
-    height: 71px;
+    width: 12.8vw;
+    height: 7.1vh;
     background-color: #313d4b;
     border-radius: 5px;
     font-family: 'Uni Neue';
@@ -153,6 +164,21 @@ body{
     font-weight: 700;
     letter-spacing: 0.01em;
     color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 100%;
+    
+    background-color: rgb(255, 255, 255, 0.6);
+    transform: translateX(-4em) skewX(-45deg);
+    animation: light 2s infinite ;
 }
 
 .contacts{
@@ -199,6 +225,7 @@ body{
     background-color: #7460f3;
     background-image: url('./assets/img/viber.png');
     background-repeat: no-repeat;
+    background-size: 1em;
     background-position: center;
     border-radius: 50%;
 }
@@ -209,6 +236,7 @@ body{
     background-color: #00a2f2;
     background-image: url('./assets/img/telegramm.png');
     background-repeat: no-repeat;
+    background-size: 1em;
     background-position: center;
     border-radius: 50%;
 }
@@ -220,6 +248,7 @@ body{
     background-image: url('./assets/img/whatsApp.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1em;
     border-radius: 50%;
 }
 
@@ -232,20 +261,259 @@ body{
 .nav-link{
     font-family: 'Uni Neue';
     font-size: 1.6vh;
-    line-height: 7.5vh;
+    line-height: 1.5;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #282728;
+    transition: 0.3s;
 }
 
-.home{
-    width: 100vw;
-    height: 100vh;
-    padding:0 9vw;
-    background-image: url('./assets/img/forma_7541.jpg');
+.nav-link:hover{
+    color: red;
+}
+
+.nav-burger{
+    width: 50px;
+    height: 50px;
+    padding-top: 11px;
+    cursor: pointer;
+    top: 20px;
+    right: 64px;
+    display: none;
     
+  }
+  
+  .nav-burger:hover{
+    filter: invert(45%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+       contrast(87%);
+  }
+  
+  .line-nav1, .line-nav2, .line-nav3{
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-bottom: 11px;
+    background-color: #000;
+    transition: 0.3s;
+  }
+
+.main-container{
+    width: 57vw;
+    height: 81vh;
+    left: 0;
+}
+
+.text-main{
+    font-family: 'Uni Neue';
+    font-size: 5.4vh;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #282728;
+    margin-top: 8vh;
+}
+
+.experience-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 45vw;
+    height: 9.6vh;
+    margin-top: 6vh;
+}
+
+.experience-item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.marcker{
+    width: 1vw;
+    height: 3px;
+    background-color: #fe5851;
+    transform: rotate(-45deg) ;
+}
+
+.year{
+    font-family: 'Uni Neue';
+    font-size: 7.2vh;
+    line-height: 1.2;
+    font-weight: 900;
+    color: #282728;
+}
+
+.experience-text{
+    font-family: 'Uni Neue';
+    font-size: 2vh;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #282728;
+}
+
+.sale-license-block{
+    width: 45vw;
+    margin-top: 7vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-sale{
+    font-family: 'Uni Neue';
+    font-size: 2vh;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #282728;
+    
+}
+
+.text{
+    font-family: 'Uni Neue';
+    font-size: 2vh;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #282728;
+    background-color: #ffffff;
+}
+
+.buy-btn{
+    position: relative;
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #50bc5b;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Uni Neue';
+    font-size: 1.7vh;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    margin-top: 2.5vh;
+    overflow: hidden;
+}
+
+.buy-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 100%;
+    
+    background-color: rgb(255, 255, 255, 0.6);
+    transform: translateX(-4em) skewX(-45deg);
+    animation: light 2s infinite ;
+}
+
+@keyframes light{
+     form{
+         transform: translateX(-4em) skewX(-45deg);
+     }
+    
+    to{
+        transform: translateX(30em) skewX(-45deg);
+    }
+    
+}
+   
+
+.calc-img{
+    width: 2vw;
+    height: 4vh;
+    padding-right: 0.5vw;
+}
+
+.title-slide{
+    font-family: 'Uni Neue';
+    font-size: 1.7vh;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #282728;
+    text-align: center;
+}
+
+.slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev{
+    width: 2vw;
+    height: 4vh;
+    background-image: url('./assets/img/prev.png');
     background-repeat: no-repeat;
-    background-position: center 0;
-    background-size: 100vw 100%;
+    background-position: center;
+}
+
+.next{
+    width: 2vw;
+    height: 4vh;
+    background-image: url('./assets/img/next.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width:1024px) {
+    .nav-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-start;
+        position: fixed;
+        top: 3vh;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+      
+      }
+      
+      .nav-burger{
+        display: block;
+         z-index: 1;
+      }
+
+      .nav-list{
+        height: 70vh;
+        width: 30vw;
+        right: 0px;
+        position: absolute;
+        top: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        transition:transform 0.3s ease-in;  
+        transform:translateX(100%);  
+      }
+
+      .nav-link{
+          line-height: 3.5;
+      }
+
+      .change .line-nav1{
+        transform: rotate(45deg) translate(11px,10px);
+      }
+      
+      .change .line-nav2{
+        opacity: 0;
+      }
+      
+      .change .line-nav3{
+        transform: rotate(-45deg) translate(8px,-7px);
+      }
+      
+      .nav-change{  
+        transform:translateX(0%);  
+       }  
 }
